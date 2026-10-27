@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shahzad Tariq | Software and App Development</title>
+<meta name="description" content="Software and app developer from Pakistan building simple tools that work well on a phone.">
+<style>
+  :root {
+    --bg: #f5f6fb;
+    --bg-glow: #dfe3fa;
+    --text: #151b33;
+    --muted: #666d88;
+    --accent: #3c4bd0;
+    --gold: #d6597a;
+    --card: rgba(255, 255, 255, 0.78);
+    --line: #dde0f0;
+    --shadow: 0 10px 30px rgba(60, 75, 208, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0f20;
+      --bg-glow: #1a2160;
+      --text: #eef0fa;
+      --muted: #9aa1c2;
+      --accent: #93a4ff;
+      --gold: #ff9db8;
+      --card: rgba(255, 255, 255, 0.05);
+      --line: #252c52;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    background:
+      radial-gradient(900px 500px at 85% -10%, var(--bg-glow), transparent 70%),
+      var(--bg);
+    min-height: 100vh;
+  }
+  main { max-width: 740px; margin: 0 auto; padding: 88px 22px 56px; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  .fade { opacity: 0; animation: rise 0.9s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1 { animation-delay: 0.05s; }
+  .d2 { animation-delay: 0.2s; }
+  .d3 { animation-delay: 0.35s; }
+  .d4 { animation-delay: 0.5s; }
+  @media (prefers-reduced-motion: reduce) {
+    .fade { animation: none; opacity: 1; }
+  }
+
+  /* Profile */
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: clamp(3rem, 10vw, 4.6rem);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  h1 span { display: block; color: var(--accent); font-style: italic; font-weight: 500; }
+  .tagline {
+    font-size: 1.25rem;
+    color: var(--muted);
+    max-width: 30em;
+    margin: 0 0 22px;
+  }
+  .intro { font-size: 1.05rem; max-width: 36em; margin: 0 0 54px; }
+  .rule {
+    width: 56px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    border: 0;
+    margin: 0 0 30px;
+  }
+
+  .label {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+  .projects { display: grid; gap: 16px; }
+  .project {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+    transition: transform 0.35s ease, border-color 0.35s ease;
+  }
+  .project:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .project h3 {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  .project p { margin: 0 0 14px; color: var(--muted); }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .stack li {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px 13px;
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: transparent;
+  }
+
+  /* Smaller supporting details */
+  .small {
+    margin-top: 60px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .small h2 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    margin: 0 0 8px;
+  }
+  .small p { margin: 0 0 20px; max-width: 40em; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  footer { margin-top: 30px; font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="eyebrow fade d1">Software &middot; Apps &middot; Ideas</span>
+    <h1 class="fade d1">Shahzad <span>Tariq</span></h1>
+    <p class="tagline fade d2">I build software and apps that feel simple and work well.</p>
+    <hr class="rule fade d2">
+    <p class="intro fade d2">I am based in Pakistan and I build the tools I wish existed. I like turning a real problem into a small app that works on a phone and feels simple to use.</p>
+  </header>
+
+  <section class="fade d3">
+    <p class="label">Software and app development</p>
+    <div class="projects">
+      <div class="project">
+        <h3>Enigma Chat</h3>
+        <p>A mobile two-person chat app with encryption modelled on the Enigma machine. Private by design and fun to use.</p>
+        <ul class="stack"><li>Mobile</li><li>Encryption</li><li>Messaging</li></ul>
+      </div>
+      <div class="project">
+        <h3>Personal Finance App</h3>
+        <p>A monthly budget and expense tracker in PKR with credit card tracking and a PIN lock. Built for how people here actually manage money.</p>
+        <ul class="stack"><li>Budgeting</li><li>PKR</li><li>PIN lock</li><li>Themes</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="small fade d4">
+    <h2>Experience</h2>
+    <p>13 years in the telecom industry across marketing and advertising. Fields include telecom marketing, out-of-home and digital OOH media planning, trade marketing, vendor management, on-ground activation and campaign execution.</p>
+
+    <h2>Interests</h2>
+    <p>Telecom and digital advertising strategy, DOOH, On Ground Activation and new technology. Space, Time, AI and aviation.</p>
+  </section>
+
+  <footer class="fade d4">
+    Get in touch on <a href="https://www.linkedin.com/">LinkedIn</a>.
+  </footer>
+</main>
+</body>
+</html>
